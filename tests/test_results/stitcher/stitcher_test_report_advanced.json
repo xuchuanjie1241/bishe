@@ -1,0 +1,504 @@
+[
+  {
+    "test_name": "feature_matching_accuracy",
+    "summary": {
+      "total_pairs": 3,
+      "strategies": {
+        "lowe": {
+          "avg_matches": 163.7,
+          "avg_time_ms": 318.8
+        },
+        "vertical": {
+          "avg_matches": 148.7,
+          "avg_time_ms": 296.5
+        },
+        "ransac": {
+          "avg_matches": 102.0,
+          "avg_time_ms": 288.7
+        },
+        "full": {
+          "avg_matches": 101.7,
+          "avg_time_ms": 297.6
+        }
+      },
+      "avg_inlier_ratio": {
+        "lowe": 0.618,
+        "vertical": 0.679,
+        "ransac": 0.953,
+        "full": 0.917
+      }
+    },
+    "details": [
+      {
+        "pair_id": 0,
+        "image1": "left.jpg",
+        "image2": "right.jpg",
+        "strategies": {
+          "lowe": {
+            "success": true,
+            "time_ms": 289.17,
+            "keypoints_left": 1547,
+            "keypoints_right": 1116,
+            "initial_matches": 1547,
+            "after_lowe": 191,
+            "after_vertical": 0,
+            "after_ransac": 0,
+            "final_matches": 191,
+            "inliers": 131,
+            "outliers": 60,
+            "inlier_ratio": 0.686
+          },
+          "vertical": {
+            "success": true,
+            "time_ms": 254.33,
+            "keypoints_left": 1547,
+            "keypoints_right": 1116,
+            "initial_matches": 1547,
+            "after_lowe": 191,
+            "after_vertical": 171,
+            "after_ransac": 0,
+            "final_matches": 171,
+            "inliers": 129,
+            "outliers": 42,
+            "inlier_ratio": 0.754
+          },
+          "ransac": {
+            "success": true,
+            "time_ms": 246.87,
+            "keypoints_left": 1547,
+            "keypoints_right": 1116,
+            "initial_matches": 1547,
+            "after_lowe": 191,
+            "after_vertical": 171,
+            "after_ransac": 131,
+            "final_matches": 131,
+            "inliers": 125,
+            "outliers": 6,
+            "inlier_ratio": 0.954
+          },
+          "full": {
+            "success": true,
+            "time_ms": 251.68,
+            "keypoints_left": 1547,
+            "keypoints_right": 1116,
+            "initial_matches": 1547,
+            "after_lowe": 191,
+            "after_vertical": 171,
+            "after_ransac": 129,
+            "final_matches": 129,
+            "inliers": 110,
+            "outliers": 19,
+            "inlier_ratio": 0.853
+          }
+        }
+      },
+      {
+        "pair_id": 1,
+        "image1": "left.jpg",
+        "image2": "right.jpg",
+        "strategies": {
+          "lowe": {
+            "success": true,
+            "time_ms": 336.01,
+            "keypoints_left": 1205,
+            "keypoints_right": 1632,
+            "initial_matches": 1205,
+            "after_lowe": 152,
+            "after_vertical": 0,
+            "after_ransac": 0,
+            "final_matches": 152,
+            "inliers": 82,
+            "outliers": 70,
+            "inlier_ratio": 0.539
+          },
+          "vertical": {
+            "success": true,
+            "time_ms": 318.76,
+            "keypoints_left": 1205,
+            "keypoints_right": 1632,
+            "initial_matches": 1205,
+            "after_lowe": 152,
+            "after_vertical": 142,
+            "after_ransac": 0,
+            "final_matches": 142,
+            "inliers": 87,
+            "outliers": 55,
+            "inlier_ratio": 0.613
+          },
+          "ransac": {
+            "success": true,
+            "time_ms": 298.56,
+            "keypoints_left": 1205,
+            "keypoints_right": 1632,
+            "initial_matches": 1205,
+            "after_lowe": 152,
+            "after_vertical": 142,
+            "after_ransac": 82,
+            "final_matches": 82,
+            "inliers": 75,
+            "outliers": 7,
+            "inlier_ratio": 0.915
+          },
+          "full": {
+            "success": true,
+            "time_ms": 310.59,
+            "keypoints_left": 1205,
+            "keypoints_right": 1632,
+            "initial_matches": 1205,
+            "after_lowe": 152,
+            "after_vertical": 142,
+            "after_ransac": 87,
+            "final_matches": 87,
+            "inliers": 79,
+            "outliers": 8,
+            "inlier_ratio": 0.908
+          }
+        }
+      },
+      {
+        "pair_id": 2,
+        "image1": "left.jpg",
+        "image2": "right.jpg",
+        "strategies": {
+          "lowe": {
+            "success": true,
+            "time_ms": 331.1,
+            "keypoints_left": 1658,
+            "keypoints_right": 897,
+            "initial_matches": 1658,
+            "after_lowe": 148,
+            "after_vertical": 0,
+            "after_ransac": 0,
+            "final_matches": 148,
+            "inliers": 93,
+            "outliers": 55,
+            "inlier_ratio": 0.628
+          },
+          "vertical": {
+            "success": true,
+            "time_ms": 316.52,
+            "keypoints_left": 1658,
+            "keypoints_right": 897,
+            "initial_matches": 1658,
+            "after_lowe": 148,
+            "after_vertical": 133,
+            "after_ransac": 0,
+            "final_matches": 133,
+            "inliers": 89,
+            "outliers": 44,
+            "inlier_ratio": 0.669
+          },
+          "ransac": {
+            "success": true,
+            "time_ms": 320.68,
+            "keypoints_left": 1658,
+            "keypoints_right": 897,
+            "initial_matches": 1658,
+            "after_lowe": 148,
+            "after_vertical": 133,
+            "after_ransac": 93,
+            "final_matches": 93,
+            "inliers": 92,
+            "outliers": 1,
+            "inlier_ratio": 0.989
+          },
+          "full": {
+            "success": true,
+            "time_ms": 330.59,
+            "keypoints_left": 1658,
+            "keypoints_right": 897,
+            "initial_matches": 1658,
+            "after_lowe": 148,
+            "after_vertical": 133,
+            "after_ransac": 89,
+            "final_matches": 89,
+            "inliers": 88,
+            "outliers": 1,
+            "inlier_ratio": 0.989
+          }
+        }
+      }
+    ],
+    "timestamp": "2026-04-13T21:43:19.344229"
+  },
+  {
+    "test_name": "transform_comparison",
+    "details": [
+      {
+        "pair_id": 0,
+        "image1": "left.jpg",
+        "image2": "right.jpg",
+        "transforms": {
+          "homography": {
+            "success": true,
+            "time_ms": 314.56,
+            "inliers": 133,
+            "outliers": 2,
+            "reproj_error_mean": 0.89,
+            "reproj_error_max": 3.34,
+            "reproj_error_std": 0.67,
+            "final_matches": 135,
+            "transform_params": {
+              "matrix": [
+                [
+                  0.9960143208608278,
+                  0.017002015672559517,
+                  128.17433320146594
+                ],
+                [
+                  0.037638525548754555,
+                  0.9581979509679781,
+                  15.030524585019691
+                ],
+                [
+                  -2.4823300123407246e-05,
+                  -1.0330290362785864e-05,
+                  1.0
+                ]
+              ]
+            }
+          },
+          "affine": {
+            "success": true,
+            "time_ms": 303.28,
+            "inliers": 110,
+            "outliers": 19,
+            "reproj_error_mean": 0.87,
+            "reproj_error_max": 3.3,
+            "reproj_error_std": 0.6,
+            "final_matches": 129,
+            "transform_params": {
+              "tx": 126.38822283119434,
+              "ty": 3.490734724182074,
+              "scale_x": 1.0193400374525303,
+              "rotation": 3.3440264906272
+            }
+          },
+          "translation": {
+            "success": false,
+            "error": "OpenCV(4.11.0) :-1: error: (-5:Bad argument) in function 'warpAffine'\n> Overload resolution failed:\n>  - Can't parse 'dsize'. Sequence item with index 1 has a wrong type\n>  - Can't parse 'dsize'. Sequence item with index 1 has a wrong type\n"
+          }
+        }
+      },
+      {
+        "pair_id": 1,
+        "image1": "left.jpg",
+        "image2": "right.jpg",
+        "transforms": {
+          "homography": {
+            "success": true,
+            "time_ms": 410.64,
+            "inliers": 83,
+            "outliers": 23,
+            "reproj_error_mean": 90.56,
+            "reproj_error_max": 95.92,
+            "reproj_error_std": 1.62,
+            "final_matches": 106,
+            "transform_params": {
+              "matrix": [
+                [
+                  0.922388123236632,
+                  0.0008277798749898749,
+                  224.89416195146055
+                ],
+                [
+                  -0.18516511582674197,
+                  0.9645727156843344,
+                  31.764382794065295
+                ],
+                [
+                  -0.00020414242821853708,
+                  6.2400560827080386e-06,
+                  1.0
+                ]
+              ]
+            }
+          },
+          "affine": {
+            "success": true,
+            "time_ms": 400.65,
+            "inliers": 79,
+            "outliers": 8,
+            "reproj_error_mean": 14.18,
+            "reproj_error_max": 17.75,
+            "reproj_error_std": 1.02,
+            "final_matches": 87,
+            "transform_params": {
+              "tx": 224.4951899158163,
+              "ty": 12.327646265373826,
+              "scale_x": 1.0247676239488734,
+              "rotation": -2.454659582921172
+            }
+          },
+          "translation": {
+            "success": false,
+            "error": "OpenCV(4.11.0) :-1: error: (-5:Bad argument) in function 'warpAffine'\n> Overload resolution failed:\n>  - Can't parse 'dsize'. Sequence item with index 1 has a wrong type\n>  - Can't parse 'dsize'. Sequence item with index 1 has a wrong type\n"
+          }
+        }
+      }
+    ],
+    "timestamp": "2026-04-13T21:43:21.559306"
+  },
+  {
+    "test_name": "blending_quality_advanced",
+    "details": [
+      {
+        "pair_id": 0,
+        "condition": "normal",
+        "methods": {
+          "average": {
+            "success": true,
+            "metrics": {
+              "ms_ssim": 0.6696,
+              "gmsd": 0.4227,
+              "qabf": 0.0233,
+              "vif": 0.6554
+            },
+            "time_ms": 57.65,
+            "output_path": "test_results/stitcher\\blending\\normal_average_pair0.png"
+          },
+          "laplacian": {
+            "success": true,
+            "metrics": {
+              "ms_ssim": 0.6528,
+              "gmsd": 0.4297,
+              "qabf": 0.0206,
+              "vif": 0.7186
+            },
+            "time_ms": 109.06,
+            "output_path": "test_results/stitcher\\blending\\normal_laplacian_pair0.png"
+          },
+          "poisson": {
+            "success": true,
+            "metrics": {
+              "ms_ssim": 0.6363,
+              "gmsd": 0.4292,
+              "qabf": 0.024,
+              "vif": 0.6091
+            },
+            "time_ms": 277.86,
+            "output_path": "test_results/stitcher\\blending\\normal_poisson_pair0.png"
+          }
+        }
+      },
+      {
+        "pair_id": 1,
+        "condition": "illumination_diff",
+        "methods": {
+          "average": {
+            "success": true,
+            "metrics": {
+              "ms_ssim": 0.6294,
+              "gmsd": 0.4387,
+              "qabf": 0.0172,
+              "vif": 0.7147
+            },
+            "time_ms": 72.0,
+            "output_path": "test_results/stitcher\\blending\\illumination_diff_average_pair1.png"
+          },
+          "laplacian": {
+            "success": true,
+            "metrics": {
+              "ms_ssim": 0.6062,
+              "gmsd": 0.4456,
+              "qabf": 0.0161,
+              "vif": 0.7663
+            },
+            "time_ms": 132.83,
+            "output_path": "test_results/stitcher\\blending\\illumination_diff_laplacian_pair1.png"
+          },
+          "poisson": {
+            "success": true,
+            "metrics": {
+              "ms_ssim": 0.5872,
+              "gmsd": 0.438,
+              "qabf": 0.0179,
+              "vif": 0.5347
+            },
+            "time_ms": 348.29,
+            "output_path": "test_results/stitcher\\blending\\illumination_diff_poisson_pair1.png"
+          }
+        }
+      },
+      {
+        "pair_id": 2,
+        "condition": "high_contrast",
+        "methods": {
+          "average": {
+            "success": true,
+            "metrics": {
+              "ms_ssim": 0.6696,
+              "gmsd": 0.4227,
+              "qabf": 0.0233,
+              "vif": 0.6554
+            },
+            "time_ms": 59.67,
+            "output_path": "test_results/stitcher\\blending\\high_contrast_average_pair2.png"
+          },
+          "laplacian": {
+            "success": true,
+            "metrics": {
+              "ms_ssim": 0.6528,
+              "gmsd": 0.4297,
+              "qabf": 0.0206,
+              "vif": 0.7186
+            },
+            "time_ms": 109.57,
+            "output_path": "test_results/stitcher\\blending\\high_contrast_laplacian_pair2.png"
+          },
+          "poisson": {
+            "success": true,
+            "metrics": {
+              "ms_ssim": 0.6363,
+              "gmsd": 0.4292,
+              "qabf": 0.024,
+              "vif": 0.6091
+            },
+            "time_ms": 329.89,
+            "output_path": "test_results/stitcher\\blending\\high_contrast_poisson_pair2.png"
+          }
+        }
+      }
+    ],
+    "recommendation": {
+      "recommended": "average",
+      "scores": {
+        "average": 3.176,
+        "laplacian": 2.716,
+        "poisson": 1.994
+      },
+      "reason": "基于MS-SSIM(30%), GMSD(25%), QAB/F(25%), VIF(10%), 效率(10%)的综合评分"
+    }
+  },
+  {
+    "test_name": "processing_speed",
+    "results": {
+      "average": {
+        "feature_extraction": 212.07,
+        "matching": 4.81,
+        "transform_estimation": 0.45,
+        "warping": 3.87,
+        "fusion": 71.95,
+        "total": 295.5
+      },
+      "laplacian": {
+        "feature_extraction": 210.55,
+        "matching": 4.8,
+        "transform_estimation": 0.53,
+        "warping": 3.79,
+        "fusion": 128.87,
+        "total": 350.49
+      },
+      "poisson": {
+        "feature_extraction": 215.35,
+        "matching": 4.83,
+        "transform_estimation": 0.25,
+        "warping": 4.36,
+        "fusion": 346.96,
+        "total": 573.73
+      }
+    },
+    "platform": "CPU",
+    "iterations": 3
+  }
+]

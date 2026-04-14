@@ -1,0 +1,173 @@
+[
+  {
+    "test_name": "feature_matching_accuracy",
+    "summary": {
+      "total_pairs": 1,
+      "strategies": {
+        "lowe": {
+          "avg_matches": 191.0,
+          "avg_time_ms": 290.5
+        },
+        "vertical": {
+          "avg_matches": 171.0,
+          "avg_time_ms": 276.8
+        },
+        "ransac": {
+          "avg_matches": 131.0,
+          "avg_time_ms": 268.2
+        },
+        "full": {
+          "avg_matches": 129.0,
+          "avg_time_ms": 283.9
+        }
+      },
+      "avg_inlier_ratio": {
+        "lowe": 0.686,
+        "vertical": 0.754,
+        "ransac": 0.954,
+        "full": 0.853
+      }
+    },
+    "details": [
+      {
+        "pair_id": 0,
+        "image1": "left.jpg",
+        "image2": "right.jpg",
+        "strategies": {
+          "lowe": {
+            "success": true,
+            "time_ms": 290.54,
+            "keypoints_left": 1547,
+            "keypoints_right": 1116,
+            "initial_matches": 1547,
+            "after_lowe": 191,
+            "after_vertical": 0,
+            "after_ransac": 0,
+            "final_matches": 191,
+            "inliers": 131,
+            "outliers": 60,
+            "inlier_ratio": 0.686
+          },
+          "vertical": {
+            "success": true,
+            "time_ms": 276.77,
+            "keypoints_left": 1547,
+            "keypoints_right": 1116,
+            "initial_matches": 1547,
+            "after_lowe": 191,
+            "after_vertical": 171,
+            "after_ransac": 0,
+            "final_matches": 171,
+            "inliers": 129,
+            "outliers": 42,
+            "inlier_ratio": 0.754
+          },
+          "ransac": {
+            "success": true,
+            "time_ms": 268.19,
+            "keypoints_left": 1547,
+            "keypoints_right": 1116,
+            "initial_matches": 1547,
+            "after_lowe": 191,
+            "after_vertical": 171,
+            "after_ransac": 131,
+            "final_matches": 131,
+            "inliers": 125,
+            "outliers": 6,
+            "inlier_ratio": 0.954
+          },
+          "full": {
+            "success": true,
+            "time_ms": 283.92,
+            "keypoints_left": 1547,
+            "keypoints_right": 1116,
+            "initial_matches": 1547,
+            "after_lowe": 191,
+            "after_vertical": 171,
+            "after_ransac": 129,
+            "final_matches": 129,
+            "inliers": 110,
+            "outliers": 19,
+            "inlier_ratio": 0.853
+          }
+        }
+      }
+    ],
+    "timestamp": "2026-04-13T20:08:56.320190"
+  },
+  {
+    "test_name": "blending_quality",
+    "details": [
+      {
+        "pair_id": 0,
+        "condition": "normal",
+        "methods": {
+          "average": {
+            "success": true,
+            "ssim_vs_input": null,
+            "seam_visibility_index": 0.7032,
+            "intensity_discontinuity": 2.2,
+            "time_ms": 58.06,
+            "output_path": "test_results/stitcher\\blending\\normal_average_pair0.png"
+          },
+          "laplacian": {
+            "success": true,
+            "ssim_vs_input": null,
+            "seam_visibility_index": 0.8106,
+            "intensity_discontinuity": 3.89,
+            "time_ms": 125.85,
+            "output_path": "test_results/stitcher\\blending\\normal_laplacian_pair0.png"
+          },
+          "poisson": {
+            "success": true,
+            "ssim_vs_input": null,
+            "seam_visibility_index": 0.7272,
+            "intensity_discontinuity": 0.73,
+            "time_ms": 327.84,
+            "output_path": "test_results/stitcher\\blending\\normal_poisson_pair0.png"
+          }
+        }
+      }
+    ],
+    "recommendation": {
+      "recommended": "average",
+      "scores": {
+        "average": 5.223511899701554,
+        "laplacian": 4.425083050489715,
+        "poisson": 2.6841964396457736
+      },
+      "reason": "基于接缝可见度、亮度连续性和计算效率的综合评分"
+    }
+  },
+  {
+    "test_name": "processing_speed",
+    "results": {
+      "average": {
+        "feature_extraction": 199.82,
+        "matching": 5.31,
+        "transform_estimation": 0.54,
+        "warping": 3.88,
+        "fusion": 63.21,
+        "total": 273.93
+      },
+      "laplacian": {
+        "feature_extraction": 208.31,
+        "matching": 5.18,
+        "transform_estimation": 0.3,
+        "warping": 3.68,
+        "fusion": 128.2,
+        "total": 347.38
+      },
+      "poisson": {
+        "feature_extraction": 211.97,
+        "matching": 5.12,
+        "transform_estimation": 0.74,
+        "warping": 3.17,
+        "fusion": 341.32,
+        "total": 564.62
+      }
+    },
+    "platform": "CPU",
+    "iterations": 3
+  }
+]
